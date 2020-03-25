@@ -13,7 +13,7 @@ const MovieCard = props => {
   const deleteMovie = () => {
     Axios.delete(`http://localhost:5000/api/movies/${props.movie.id}`)
       .then(res => {
-        props.setMovieList(props.movieList.filter(item => item !== props.movie))
+        // props.setMovieList(props.movieList.filter(item => item !== props.movie))
         history.push('/')
         props.getMovieList()
       })
